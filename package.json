@@ -1,6 +1,7 @@
 {
   "name": "xenocrypts-monorepo",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vercel dev",
     "build": "cd xenocrypts && npm install && npm run build"
