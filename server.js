@@ -25,7 +25,7 @@ app.post('/api/generate-quote', async (req, res) => {
     if (!plainText || typeof plainText !== 'string') plainText = '';
     // Remove accents from the solution
     function removeAccents(str) {
-      return str.normalize('NFD').replace(/[00-6f]/g, '');
+      return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     }
     plainText = plainText.trim().replace(/^\*+|\*+$/g, '');
     // Remove accents but keep Ñ as a distinct character
@@ -72,5 +72,4 @@ app.post('/api/generate-quote', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+export default app;

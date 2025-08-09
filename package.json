@@ -1,4 +1,10 @@
 {
+  "name": "xenocrypts-monorepo",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "cd xenocrypts && npm install && npm run build"
+  },
   "dependencies": {
     "@google/genai": "^1.13.0",
     "body-parser": "^2.2.0",
@@ -6,5 +12,8 @@
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "vercel": "^32.3.0"
   }
 }
