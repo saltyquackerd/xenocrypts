@@ -36,7 +36,7 @@ app.post('/api/generate-quote', async (req, res) => {
 
     // Monoalphabetic substitution cipher
     function aristocratCipher(text) {
-      const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      const alphabet = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
       // Shuffle alphabet for mapping
       function shuffle(str) {
         const arr = str.split('');
